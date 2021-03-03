@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Genres\Handlers\" />
+    <Folder Include="Features\Genres\Commands\" />
+    <Folder Include="Features\Genres\Queries\" />
+    <Folder Include="Features\Movies\Commands\" />
+    <Folder Include="Features\Movies\Handlers\" />
+    <Folder Include="Features\Movies\Queries\" />
+    <Folder Include="Features\Rents\Commands\" />
+    <Folder Include="Features\Rents\Handlers\" />
+    <Folder Include="Features\Rents\Queries\" />
+  </ItemGroup>
+
+</Project>
