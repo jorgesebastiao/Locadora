@@ -7,7 +7,6 @@ namespace Locadora.Domain.Features.Rents
     {
         public DateTime CreateAt { get; set; }
         public DateTime UpdateAt { get; set; }
-        public bool Remove { get; set; }
         public string CustomerCpf { get; set; }
 
         public Rent()
