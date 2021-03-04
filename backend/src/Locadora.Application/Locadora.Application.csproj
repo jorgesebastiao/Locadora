@@ -5,9 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Movies\Commands\" />
-    <Folder Include="Features\Movies\Handlers\" />
-    <Folder Include="Features\Movies\Queries\" />
     <Folder Include="Features\Rents\Commands\" />
     <Folder Include="Features\Rents\Handlers\" />
     <Folder Include="Features\Rents\Queries\" />

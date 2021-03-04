@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  locadora:
+    image: mehiell/locadora
+    container_name: locadora
+    environment:
+      - ASPNETCORE_URLS=http://+
+    ports:
+      - "80:80" 

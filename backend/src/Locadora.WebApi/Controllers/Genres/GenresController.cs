@@ -25,7 +25,7 @@ namespace Locadora.WebApi.Controllers.Genres
 
         #region HttpGet
         /// <summary>
-        /// Busca os generos cadastrados no sistema
+        /// Busca todos os generos no sistema
         /// </summary>
         /// <remarks>
         /// Exemplo de requisição:

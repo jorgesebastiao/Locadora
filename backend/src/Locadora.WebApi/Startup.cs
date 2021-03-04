@@ -39,12 +39,14 @@ namespace Locadora.WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Locadora.WebApi v1"));
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Locadora.WebApi v1"));
+
             app.UseCORS();
-            app.UseHttpsRedirection();
+            //Todo: Deve ser configurado o UseHttpsRedirection para quando aplicação rodar em produção
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
