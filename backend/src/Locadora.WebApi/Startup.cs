@@ -26,6 +26,7 @@ namespace Locadora.WebApi
             services.AddCors();
             services.AddDependecies(Configuration);
 
+            services.AddMVC();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Locadora.WebApi", Version = "v1" });

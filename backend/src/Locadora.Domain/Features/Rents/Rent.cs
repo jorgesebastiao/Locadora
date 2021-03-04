@@ -5,8 +5,8 @@ namespace Locadora.Domain.Features.Rents
 {
     public class Rent: Entity
     {
-        public DateTime CreateAt { get; set; }
-        public DateTime UpdateAt { get; set; }
+        public DateTime CreateAt { get; private set; }
+        public DateTime UpdateAt { get; private set; }
         public string CustomerCpf { get; set; }
 
         public Rent()

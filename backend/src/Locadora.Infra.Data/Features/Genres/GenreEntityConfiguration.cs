@@ -13,7 +13,7 @@ namespace Locadora.Infra.Data.Features.Genres
             builder.Property(g => g.CreateAt).IsRequired();
             builder.Property(g => g.UpdateAt).IsRequired();
             builder.Property(g => g.Active).IsRequired();
-            builder.Property(g => g.Remove).IsRequired();
+            builder.Property(g => g.IsRemoved).IsRequired();
 
         }
     }

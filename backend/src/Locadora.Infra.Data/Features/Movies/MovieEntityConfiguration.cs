@@ -13,7 +13,7 @@ namespace Locadora.Infra.Data.Features.Movies
             builder.Property(m => m.CreateAt).IsRequired();
             builder.Property(m => m.UpdateAt).IsRequired();
             builder.Property(m => m.Active).IsRequired();
-            builder.Property(m => m.Remove).IsRequired();
+            builder.Property(m => m.IsRemoved).IsRequired();
 
             builder.Property(m => m.GenreId).IsRequired();
             builder.HasOne(m => m.Genre).WithMany(g => g.Movies);

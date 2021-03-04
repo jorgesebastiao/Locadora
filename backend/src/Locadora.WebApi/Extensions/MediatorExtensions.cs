@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Locadora.Application;
+using Locadora.WebApi.Behaviours;
 using MediatR;
 using MediatR.Pipeline;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace Locadora.WebApi.Extensions
                     .AsImplementedInterfaces();
             }
 
-         //   containerBuilder.RegisterGeneric(typeof(ValidationPipeline<,>)).As(typeof(IPipelineBehavior<,>));
+            containerBuilder.RegisterGeneric(typeof(ValidationPipeline<,>)).As(typeof(IPipelineBehavior<,>));
          //   containerBuilder.RegisterGeneric(typeof(TransactionPipeline<,>)).As(typeof(IPipelineBehavior<,>));
 
             containerBuilder.RegisterGeneric(typeof(RequestPostProcessorBehavior<,>)).As(typeof(IPipelineBehavior<,>));

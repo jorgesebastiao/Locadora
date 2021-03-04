@@ -13,12 +13,25 @@ namespace Locadora.Domain.Features.Genres
             UpdateAt = CreateAt;
         }
 
-        public DateTime CreateAt { get; set; }
-        public DateTime UpdateAt { get; set; }
+        public DateTime CreateAt { get; private set; }
+        public DateTime UpdateAt { get; private set; }
         public string Name { get; set; }
         public bool Active { get; set; }
-        public bool Remove { get; set; }
+        public bool IsRemoved { get; private set; }
         public virtual List<Movie> Movies { get; set; }
+
+        /// <summary>
+        /// Marca o genero como removido.
+        /// </summary>
+        public virtual void SetAsRemoved() {
+            SetLastModification();
+            IsRemoved = true; 
+        }
+
+        /// <summary>
+        /// Atualiza a data de Modificação.
+        /// </summary>
+        public virtual void SetLastModification() => UpdateAt = DateTime.UtcNow;
 
     }
 }

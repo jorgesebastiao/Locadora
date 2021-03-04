@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Locadora.Core.Results
 {
@@ -17,6 +18,18 @@ namespace Locadora.Core.Results
             catch (Exception e)
             {
                 return e;
+            }
+        }
+
+        public async static Task<Result<Exception, TSuccess>> Run<TSuccess>(Func<Task<TSuccess>> func)
+        {
+            try
+            {
+                return await func();
+            }
+            catch (Exception ex)
+            {
+                return ex;
             }
         }
 

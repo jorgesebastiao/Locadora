@@ -10,6 +10,7 @@
     <PackageReference Include="FluentValidation" Version="9.5.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.1" />
     <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.3" />
@@ -17,8 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Customers\ViewModels\" />
-    <Folder Include="Controllers\Genres\ViewModels\" />
     <Folder Include="Controllers\Movies\ViewModels\" />
     <Folder Include="Controllers\Rents\ViewModels\" />
   </ItemGroup>

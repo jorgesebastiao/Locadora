@@ -1,13 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Genres\Handlers\" />
-    <Folder Include="Features\Genres\Commands\" />
-    <Folder Include="Features\Genres\Queries\" />
     <Folder Include="Features\Movies\Commands\" />
     <Folder Include="Features\Movies\Handlers\" />
     <Folder Include="Features\Movies\Queries\" />
@@ -16,4 +13,16 @@
     <Folder Include="Features\Rents\Queries\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="FluentValidation" Version="9.5.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Locadora.Core\Locadora.Core.csproj" />
+    <ProjectReference Include="..\Locadora.Domain\Locadora.Domain.csproj" />
+    <ProjectReference Include="..\Locadora.Infra.Data\Locadora.Infra.Data.csproj" />
+  </ItemGroup>
+  
 </Project>

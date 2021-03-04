@@ -1,6 +1,6 @@
 ﻿namespace Locadora.Application
 {
-    public static class AppModule
+    public  class AppModule
     {
 
     }
