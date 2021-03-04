@@ -20,8 +20,26 @@ namespace Locadora.Domain.Features.Movies
         }
 
         /// <summary>
-        /// Marca o genero como removido.
+        /// Marca o filme como removido.
         /// </summary>
-        public virtual void SetAsRemoved() => IsRemoved = true;
+        public virtual void SetAsRemoved()
+        {
+            SetLastModification();
+            IsRemoved = true;
+        }
+
+        /// <summary>
+        /// Atualiza a data de Modificação.
+        /// </summary>
+        public virtual void SetLastModification() => UpdateAt = DateTime.UtcNow;
+
+        /// <summary>
+        /// Atualiza o genero do filme.
+        /// </summary>
+        public virtual void SetGenre(Genre genre)
+        {
+            Genre = Genre;
+            GenreId = genre.Id;
+        }
     }
 }

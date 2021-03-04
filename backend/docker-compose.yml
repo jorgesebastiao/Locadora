@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  locadora:
+    image: mehiell/locadora
+    build:
+      context: ./src
+      dockerfile: Locadora.WebApi/Dockerfile
+    container_name: locadora
+    ports:
+      - "80:80"
+      - "443:443"

@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Movies\ViewModels\" />
     <Folder Include="Controllers\Rents\ViewModels\" />
   </ItemGroup>
 

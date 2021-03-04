@@ -15,6 +15,7 @@ namespace Locadora.Infra.Data.Features.Genres
             builder.Property(g => g.Active).IsRequired();
             builder.Property(g => g.IsRemoved).IsRequired();
 
+            builder.HasMany(g => g.Movies).WithOne(m => m.Genre);
         }
     }
 }

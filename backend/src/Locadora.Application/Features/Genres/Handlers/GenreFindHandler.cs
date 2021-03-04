@@ -12,12 +12,6 @@ namespace Locadora.Application.Features.Genres.Handlers
     public class GenreFindHandler : IRequestHandler<GenreGetQuery, Result<Exception, Genre>>
     {
         private readonly IGenreRepository _genreRepository;
-        private readonly IMapper _mapper;
-
-        public GenreFindHandler(IGenreRepository genreRepository, IMapper mapper) : this(genreRepository)
-        {
-            _mapper = mapper;
-        }
 
         public GenreFindHandler(IGenreRepository genreRepository)
         {
