@@ -4,6 +4,7 @@ using Locadora.Domain.Features.Movies;
 using Locadora.Infra.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -77,6 +78,22 @@ namespace Locadora.Infra.Data.Features.Movies
                 return saveChangesCallback.Failure;
 
             return movie;
+        }
+
+        /// <summary>
+        /// Atualiza multiplos Filmes.
+        /// </summary>
+        /// <param name="movie">Lista de filmes a ser atualizado</param>
+        /// <returns>Sucesso na atualização</returns>
+        public async Task<Result<Exception, Unit>> UpdateAsync(List<Movie> movies)
+        {
+            _context.Movies.UpdateRange(movies);
+            var saveChangesCallback = await Result.Run(() => _context.SaveChangesAsync());
+
+            if (saveChangesCallback.IsFailure)
+                return saveChangesCallback.Failure;
+
+            return Unit.Successful;
         }
     }
 }

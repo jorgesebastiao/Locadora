@@ -8,9 +8,15 @@ namespace Locadora.WebApi.Controllers.Movies
     {
         public MappingProfile()
         {
-            CreateMap<Movie, MovieViewModel>();
+            CreateMap<Movie, MovieViewModel>()
+                .ForMember(dest => dest.CreationDate, opt => opt.MapFrom(src => src.CreateAt))
+                .ForMember(dest => dest.LastModification, opt => opt.MapFrom(src => src.UpdateAt))
+                .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
 
-            CreateMap<Movie, MovieDetailViewModel>();
+            CreateMap<Movie, MovieDetailViewModel>()
+                .ForMember(dest => dest.CreationDate, opt => opt.MapFrom(src => src.CreateAt))
+                .ForMember(dest => dest.LastModification, opt => opt.MapFrom(src => src.UpdateAt))
+                .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
         }
     }
 }

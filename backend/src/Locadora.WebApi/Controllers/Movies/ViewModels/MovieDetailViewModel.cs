@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Locadora.WebApi.Controllers.Movies.ViewModels
 {
     public class MovieDetailViewModel
     {
-
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public bool Active { get; set; }
+        public string Genre { get; set; }
+        public DateTime CreationDate { get; set; }
+        public DateTime LastModification { get; set; }
     }
 }

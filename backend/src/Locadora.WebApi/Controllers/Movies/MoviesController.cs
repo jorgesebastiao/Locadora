@@ -126,6 +126,25 @@ namespace Locadora.WebApi.Controllers.Movies
         {
             return HandleCommand(await _mediator.Send(new MovieRemoveCommand { MovieId = movieId }));
         }
+
+        /// <summary>
+        /// Remove multiplos filmes do sistema.
+        /// </summary>
+        /// <remarks>
+        /// Exemplo de requisição:
+        ///
+        ///     DELETE /api/Movies
+        ///
+        /// </remarks>
+        [ProducesResponseType(typeof(Core.Results.Unit), 200)]
+        [ProducesResponseType(typeof(ExceptionPayload), 400)]
+        [ProducesResponseType(typeof(ExceptionPayload), 404)]
+        [ProducesResponseType(typeof(ExceptionPayload), 500)]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteMultiplesAsync(MovieRemoveMultipleCommand command)
+        {
+            return HandleCommand(await _mediator.Send(command));
+        }
         #endregion HttpDelete
     }
 }
