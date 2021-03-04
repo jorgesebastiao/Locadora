@@ -4,11 +4,17 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
+
 WORKDIR /src
-COPY ["src/Locadora.WebApi/Locadora.WebApi.csproj", "src/Locadora.WebApi/"]
-RUN dotnet restore "src/Locadora.WebApi/Locadora.WebApi.csproj"
+COPY ["./Locadora.WebApi/Locadora.WebApi.csproj", "Locadora.WebApi/"]
+COPY ["./Locadora.Application/Locadora.Application.csproj", "Locadora.Application/"]
+COPY ["./Locadora.Domain/Locadora.Domain.csproj", "Locadora.Domain/"]
+COPY ["./Locadora.Infra.Data/Locadora.Infra.Data.csproj", "Locadora.Infra.Data/"]
+COPY ["./Locadora.Core/Locadora.Core.csproj", "Locadora.Core/"]
+
+RUN dotnet restore "Locadora.WebApi/Locadora.WebApi.csproj"
 COPY . .
-WORKDIR "/src/src/Locadora.WebApi"
+WORKDIR "/src/Locadora.WebApi"
 RUN dotnet build "Locadora.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
