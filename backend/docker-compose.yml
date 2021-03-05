@@ -4,8 +4,8 @@ services:
   locadora:
     image: mehiell/locadora
     build:
-      context: ./src
-      dockerfile: Locadora.WebApi/Dockerfile
+      context: .
+      dockerfile: src/Locadora.WebApi/Dockerfile
     container_name: locadora
     environment:
       - ASPNETCORE_URLS=http://+
