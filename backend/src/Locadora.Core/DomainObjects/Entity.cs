@@ -4,6 +4,10 @@ namespace Locadora.Domain.DomainObjects
 {
     public abstract class Entity
     {
+        /// <summary>
+        /// Alterado o tipo de dado para o Identificador da entidade de int para Guid
+        /// para que quando sistemas evolua no futuro e facilite as migrações e junções de dados
+        /// </summary>
         public Guid Id { get; set; }
 
         protected Entity()
