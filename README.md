@@ -1,6 +1,10 @@
-# Projeto de exemplo DDD Locadora 
+# Locadora Web Api 
 
- Tecnologias utilizadas
+# **Demostração**
+- [Locadora Web Api ](http://locadora.southcentralus.cloudapp.azure.com/swagger/index.html)
+
+
+**Tecnologias utilizadas**
 
 **Back-end**
 - C#
@@ -8,11 +12,14 @@
 - MediatR,
 - AutoMapper,
 - FluentValidation 
-- EntityFramework COre
+- EntityFramework Core
 - `swagger` Para gerar a UI da documentação dos serviços Rest
 
 **Ambiente**
  - Docker
 
 **Banco de dados**
- - mysql 8.0.0
+ - sql-server 
+
+
+ 
