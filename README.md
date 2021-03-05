@@ -1,4 +1,4 @@
-# Projeto de exemplo api Rest Full de uma locadora de filmes utilizando DDD 
+# Projeto de exemplo api Rest Full de uma locadora de filmes utilizando DDD e CQRS
 
 **Demostração**
 - [Locadora Web Api ](http://locadora.southcentralus.cloudapp.azure.com/swagger/index.html)
