@@ -33,8 +33,6 @@ namespace Locadora.Infra.Data.Contexts
             modelBuilder.ApplyConfiguration(new MovieEntityConfiguration());
             modelBuilder.ApplyConfiguration(new RentEntityConfiguration());
 
-           // modelBuilder.Seed();
-
             modelBuilder.HasDefaultSchema("locadora");
 
             // Chama o OnModelCreating do EF para dar continuidade na criação do modelo
