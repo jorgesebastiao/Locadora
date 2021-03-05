@@ -1,4 +1,4 @@
-# Projeto de exemplo utilizando DDD e CQRS  
+# Projeto de exemplo de uma Locadora utilizando DDD e CQRS  
 
 **Demostração**
 - [Locadora Web Api ](http://locadora.southcentralus.cloudapp.azure.com/swagger/index.html)
