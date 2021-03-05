@@ -10,7 +10,12 @@ using Unit = Locadora.Core.Results.Unit;
 
 namespace Locadora.Application.Features.Movies.Handlers
 {
-    public  class MovieMultipleRemoveHandler : IRequestHandler<MovieRemoveMultipleCommand, Result<Exception, Unit>>
+    /// <summary>
+    /// Handler responsável por modificar o registro dos filmes para removido(Soft Delete)
+    /// Utilizado Soft Delete para remover logicamene os dados do sitemas, mantendo os dados no sistema
+    /// onde esses dados poderiam no futuro ser utilizados para BI
+    /// </summary>
+    public class MovieMultipleRemoveHandler : IRequestHandler<MovieRemoveMultipleCommand, Result<Exception, Unit>>
     {
         private readonly IMovieRepository _movieRepository;
 

@@ -25,7 +25,7 @@ namespace Locadora.WebApi.Controllers.Movies
 
         #region HttpGet
         /// <summary>
-        /// Busca todos os  filmes no sistema
+        /// Busca todos os filmes
         /// </summary>
         /// <remarks>
         /// Exemplo de requisição:
@@ -66,7 +66,7 @@ namespace Locadora.WebApi.Controllers.Movies
 
         #region HttpPost
         /// <summary>
-        /// Cria um novo Filme no sistema.
+        /// Registra um novo Filme.
         /// </summary>
         /// <remarks>
         /// Exemplo de requisição:
@@ -108,7 +108,7 @@ namespace Locadora.WebApi.Controllers.Movies
 
         #region HttpDelete
         /// <summary>
-        /// Deleta um Filme do sistema.
+        /// Remove um Filme.
         /// </summary>
         /// <remarks>
         /// Exemplo de requisição:
@@ -128,7 +128,7 @@ namespace Locadora.WebApi.Controllers.Movies
         }
 
         /// <summary>
-        /// Remove multiplos filmes do sistema.
+        /// Remove multiplos filmes.
         /// </summary>
         /// <remarks>
         /// Exemplo de requisição:

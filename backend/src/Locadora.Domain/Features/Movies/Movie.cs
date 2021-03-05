@@ -34,7 +34,7 @@ namespace Locadora.Domain.Features.Movies
         public virtual void SetLastModification() => UpdateAt = DateTime.UtcNow;
 
         /// <summary>
-        /// Atualiza o genero do filme.
+        /// Atribui o genero ao filme.
         /// </summary>
         public virtual void SetGenre(Genre genre)
         {
