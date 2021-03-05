@@ -1,9 +1,10 @@
-# Projeto de exemplo de uma Locadora utilizando DDD e CQRS  
+# Locadora Web Api 
 
-**Demostração**
+# **Demostração**
 - [Locadora Web Api ](http://locadora.southcentralus.cloudapp.azure.com/swagger/index.html)
 
- Tecnologias utilizadas
+
+**Tecnologias utilizadas**
 
 **Back-end**
 - C#
