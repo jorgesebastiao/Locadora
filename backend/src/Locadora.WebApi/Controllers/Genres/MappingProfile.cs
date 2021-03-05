@@ -8,9 +8,13 @@ namespace Locadora.WebApi.Controllers.Genres
     {
         public MappingProfile()
         {
-            CreateMap<Genre, GenreViewModel>();
+            CreateMap<Genre, GenreViewModel>()
+                .ForMember(dest => dest.CreationDate, opt => opt.MapFrom(src => src.CreateAt))
+                .ForMember(dest => dest.LastModification, opt => opt.MapFrom(src => src.UpdateAt));
 
-            CreateMap<Genre, GenreDetailViewModel>();
+            CreateMap<Genre, GenreDetailViewModel>()
+                .ForMember(dest => dest.CreationDate, opt => opt.MapFrom(src => src.CreateAt))
+                .ForMember(dest => dest.LastModification, opt => opt.MapFrom(src => src.UpdateAt));
         }
     }
 }
