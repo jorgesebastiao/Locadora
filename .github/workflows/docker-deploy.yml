@@ -30,7 +30,7 @@ jobs:
       - name: Docker login
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build image docker
-        run: docker build -t locadora -f ./src/Locadora.WebApi/Dockerfile .
+        run: docker build -t locadora -f ./src/Locadora.WebApi/Dockerfile ./src
         working-directory: ${{env.backend}}
       - name: Tags image docker
         run: |
