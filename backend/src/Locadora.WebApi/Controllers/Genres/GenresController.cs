@@ -71,7 +71,7 @@ namespace Locadora.WebApi.Controllers.Genres
         /// <remarks>
         /// Exemplo de requisição:
         ///
-        ///     POST /api/Sites
+        ///     POST /api/Genres
         ///  
         /// </remarks>
         [HttpPost]
