@@ -19,7 +19,7 @@ namespace Locadora.Application.Features.Movies.Commands
                 .NotNull()
                 .NotEmpty()
                 .Custom((list, context) => {
-                    if (list.Count > 20)
+                    if (list!=null && list.Count > 20)
                     {
                         context.AddFailure("The list must contain 20 items or fewer");
                     }

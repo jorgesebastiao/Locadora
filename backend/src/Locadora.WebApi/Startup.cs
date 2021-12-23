@@ -1,4 +1,5 @@
 using Autofac;
+using Locadora.Infra.Data.Contexts;
 using Locadora.WebApi.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,6 +25,7 @@ namespace Locadora.WebApi
             services.AddControllers();
             services.AddAutoMapper();
             services.AddCors();
+            services.AddHealthChecksMiddleware<LocadoraDbContext>();
             services.AddDependecies(Configuration);
 
             services.AddMVC();
@@ -56,6 +58,8 @@ namespace Locadora.WebApi
             {
                 endpoints.MapControllers();
             });
+
+            app.UseHealthyChecksMiddleware();
 
             app.ApplyMigrations();
         }
