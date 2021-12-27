@@ -1,19 +1,26 @@
 ﻿using Locadora.Core.Exceptions;
 using System;
-using System.Text.Json.Serialization;
 
 namespace Locadora.WebApi.Exceptions
 {
     public class ExceptionPayload
     {
+        public ExceptionPayload(int status, string error, string message, Exception exception)
+        {
+            Status = status;
+            Error = error;
+            Message = message;
+            _exception = exception;
+        }
+
+        private Exception _exception;
         public int Status { get; set; }
 
         public string Error { get; set; }
 
         public string Message { get; set; }
 
-        [JsonIgnore]
-        public Exception Exception { get; set; }
+        public Exception GetException() => _exception;
 
         public static ExceptionPayload New<T>(T exception) where T : Exception
         {
@@ -31,13 +38,7 @@ namespace Locadora.WebApi.Exceptions
                 error = StatusCodes.Unhandled.ToString();
             }
 
-            return new ExceptionPayload
-            {
-                Status = statusCode,
-                Error = error,
-                Message = exception.Message,
-                Exception = exception,
-            };
+            return new ExceptionPayload(statusCode, error, exception.Message, exception);
         }
     }
 }

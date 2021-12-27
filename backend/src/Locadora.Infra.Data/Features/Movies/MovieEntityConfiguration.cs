@@ -17,6 +17,8 @@ namespace Locadora.Infra.Data.Features.Movies
 
             builder.Property(m => m.GenreId).IsRequired();
             builder.HasOne(m => m.Genre).WithMany(g => g.Movies);
+
+            builder.HasQueryFilter(m => EF.Property<bool>(m, "IsDeleted") == false);
         }
     }
 }
